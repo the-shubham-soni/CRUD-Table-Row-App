@@ -1,0 +1,139 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#del {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#del:hover {
+  background-color: darkred;
+}
+
+.sub {
+  background-color: #4CAF50;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.sub:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+#newTabButton{
+  background-color:  rgb(34, 123, 240);
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+#newTabButton:hover{
+  background-color:  rgb(17, 107, 190);
+}
+
+#getUsersButton {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px; /* Adds space above the button */
+  margin-bottom: 20px;
+}
+
+#getUsersButton:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+#getUsersButton:focus {
+  outline: none; /* Remove focus outline */
+}
+
+#updateDbButton{
+  background-color: #e48900; /* Green */
+  color: white;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px; /* Adds space above the button */
+  margin-bottom: 20px;
+}
+#updateDbButton:hover {
+  background-color: #b87613; /* Darker green on hover */
+}
+
+#insertDbButton{
+  background-color: #9c00e4; /* Green */
+  color: white;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px; /* Adds space above the button */
+  margin-bottom: 20px;
+}
+#insertDbButton:hover {
+  background-color: #7804ad; /* Darker green on hover */
+}

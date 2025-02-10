@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>This is Page Two</h1>
+  
+    <table *ngIf="dataService.getRows().length > 0">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of dataService.getRows()">
+          <td>{{ row.number }}</td>
+          <td>{{ row.name }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="dataService.getRows().length === 0">No data available.</p>
+  </div>
+  

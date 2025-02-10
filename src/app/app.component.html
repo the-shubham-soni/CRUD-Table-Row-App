@@ -1,0 +1,101 @@
+<div class="container">
+  <h1>Header</h1>
+
+  <!-- Form for user inputs -->
+  <div class="form">
+    <input type="number" [(ngModel)]="newRow.number" placeholder="Enter Number" />
+    <input type="text" [(ngModel)]="newRow.name" placeholder="Enter Name" />
+    <input type="email" [(ngModel)]="newRow.email" placeholder="Enter Email" />
+    <input type="date" [(ngModel)]="newRow.date" placeholder="Enter Date" />
+    <button (click)="addRow()" class="sub">Submit</button>
+  </div>
+
+  <!-- Table displaying the rows for user info -->
+  <table *ngIf="rows.length > 0">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of rows; let i = index">
+        <td>{{ row.number }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.date }}</td>
+        <td>
+          <button id="del" (click)="deleteRow(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="rows.length === 0">No data available.</p>
+
+  <br><br>
+
+  <!-- New Form for "Details" -->
+  <h1>Details</h1>
+  <div class="form">
+    <input type="number" [(ngModel)]="newDetail.deptId" placeholder="Enter DeptId" />
+    <input type="text" [(ngModel)]="newDetail.deptName" placeholder="Enter Dept Name" />
+    <input type="number" [(ngModel)]="newDetail.age" placeholder="Enter Age" />
+    <input type="date" [(ngModel)]="newDetail.date" placeholder="Enter Date" />
+    <button (click)="addDetail()" class="sub">Submit</button>
+  </div>
+
+  <!-- Table displaying the rows for details -->
+  <table *ngIf="details.length > 0">
+    <thead>
+      <tr>
+        <th>DeptId</th>
+        <th>Dept Name</th>
+        <th>Age</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of details; let i = index">
+        <td>{{ detail.deptId }}</td>
+        <td>{{ detail.deptName }}</td>
+        <td>{{ detail.age }}</td>
+        <td>{{ detail.date }}</td>
+        <td>
+          <button id="del" (click)="deleteDetail(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="details.length === 0">No details available.</p>
+
+  <!-- Button to open in a new tab -->
+  <button id="newTabButton" *ngIf="!isNewTabOpened" (click)="openInNewTab()">Open in New Tab</button>
+
+  <!-- Button to Update Details to DB -->
+<button id="updateDbButton" (click)="showUpdateForm()">Update details to DB</button>
+
+<!-- Update form for backend -->
+<div *ngIf="showUpdateFormFlag" class="form">
+  <input type="number" [(ngModel)]="updateDetail.id" placeholder="Enter ID" />
+  <input type="text" [(ngModel)]="updateDetail.name" placeholder="Enter Name" />
+  <input type="email" [(ngModel)]="updateDetail.email" placeholder="Enter Email" />
+  <button (click)="updateUserDetails()" class="sub">Submit</button>
+</div>
+
+<!----------------- insert button ------------------>
+<button id="insertDbButton" (click)="showInsertForm()">Insert details to DB</button>
+
+<!--------------- Insert form for backend ---------------->
+<div *ngIf="showInsertFormFlag" class="form">
+  <input type="number" [(ngModel)]="insertDetail.id" placeholder="Enter ID" />
+  <input type="text" [(ngModel)]="insertDetail.name" placeholder="Enter Name" />
+  <input type="email" [(ngModel)]="insertDetail.email" placeholder="Enter Email" />
+  <button (click)="insertUserDetails()" class="sub">Submit</button>
+</div>
+</div>
